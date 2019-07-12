@@ -1,7 +1,7 @@
 const homeArr = ["a mansion", "an apartment", "a castle", "a house", "a world far beyond our own", "a trash can", "the hood"];
-const transportArr = [
-    "a supercar", "a horse-drawn carriage", "a Honda Civic", "teleportation", "walking", "a wheelchair","a nintendo labo motorcycle","a Charizard","a sparrow"];
-const powerArr = ["mindbending", "remote teleportation", "telekinesis", "telepathy", "being good at fortnite", "mindreading", "being an adept coder", "godhood", "invincibility"];
+const transportArr = ["a supercar", "a horse-drawn carriage", "a Honda Civic", "teleportation", "walking", "a wheelchair","a nintendo labo motorcycle","a Charizard","a sparrow"];
+const powerArr = ["mindbending", "remote teleportation", "telekinesis", "telepathy", "being good at fortnite", "mindreading", "being an adept coder", "godhood", "invincibility", 
+];
 
 
 if(process.argv[2] != undefined){
@@ -12,7 +12,7 @@ if(process.argv[4] != undefined){
 }
 
 function mach(){
-    return "You shall live in " + dwelling() + " with your " + offspring() + " offspring. Your transport will be " + transport() + " and you have been given the power of " + power();
+    return "You shall live in " + dwelling() + " with your " + offspring() + " offspring. Your transport will be " + transport() + " and you have been given the power of " + power() + ".";
 }
 
 function random (number){
@@ -23,7 +23,7 @@ function dwelling(){
     return homeArr[random(homeArr.length)];
 }
 function fifty50(){
-    return random(11);
+    return random(51);
 }
 function offspring(){
     if(fifty50() == 1){
@@ -31,7 +31,7 @@ function offspring(){
 }
 else{
     if(process.argv[3] != undefined){
-    return random(10);
+    return random(50);
     }
 }
 }
